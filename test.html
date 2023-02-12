@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Compte-rendu du TP3</title>
+    <link href="compte-rendu.css" rel="stylesheet" media="all" type="text/css">
+  </head>
+  <body>
+  	<div class="conteneur">
+  		<div class="entete">
+		    <h1 class="centered">Compte-rendu de TP3</h1>
+		    <hr>
+				<p class="tdroit">Sarah Ouchemoukh</p>
+				<p class="tdroit"><a href="https://github.com/sarahexplore/TPs-Prog-Web.git">Mes TPs</a></p>
+	    </div>
+	    <div class="corps">
+		    <h2>Exercice 0&nbsp;: Mon compte-rendu est trop stylé&nbsp;!</h2>
+		   		<ol class="romain">
+		    		<li>
+		    			J'ai ajouté à la balise &lt;h2&gt; un attribut style qui permet de 
+		    			mettre le titre de l'exercice en orange.
+		    		</li>
+		    		<li>
+		    			Mon document utilise la police sans-serif.
+		    		</li>
+		    		<li>
+		    			J'ai changé la taille des balises &lt;h1&gt;, &lt;h2&gt; et &lt;h3&gt;.
+		    			<p class="extrait">
+			    			h1 {<br>&emsp;font-size: 24pt;<br>}<br>
+			    			h2 {<br>&emsp;font-size: 18pt;<br>}<br>
+			    			h3 {<br>&emsp;font-size: 16pt;<br>}
+		    			</p>
+		    		</li>
+		    		<li>
+		    			Comme l'algo de CSS donne la priorité aux propriétés les plus 
+		    			personnalisées, donc il applique la couleur bleu marine à &lt;h2&gt; 
+		    			sauf celle de l'exercice 3.
+		    			<p class="extrait">
+		    				h2 {<br>&emsp;color: navy;<br>&emsp;font-size: 18pt;<br>}<br>
+		    			</p>
+		    		</li>
+		    		<li>
+		    			J'ai centré le titre du compte-rendu de TP en créant une classe <b>centered</b>.
+		    			<p class="extrait">
+			    			.centered {<br>&emsp;text-align: center;<br>}<br>...<br>
+			    			&lt;h1 class="centered"&gt;Compte-rendu de TP1&lt;/h1&gt;
+			    		</p>
+		    		</li>
+		    		<li>
+		    			J'ai aligné mon nom à droite avec la classe <b>right</b>.
+		    			<p class="extrait">
+			    			div.right {<br>&emsp;text-align: right;<br>}<br>...<br>
+			    			&lt;div class="right"&gt;Sarah OUCHEMOUKH&lt;/div&gt;
+			    		</p>
+		    		</li>
+		    		<li>
+		    			J'ai utilisé les pseudo-classes des liens pour changer la couleur du lien
+		    			en fonction de son état.
+		    			<p class="extrait">
+		    			a:link {<br>&emsp;color: red;<br>}<br>
+					    a:hover {<br>&emsp;color: teal;<br>}
+					    </p> 
+		    		</li>
+					</ol>
+				<h2>Exercice 1&nbsp;: Feuille de style externe, liste et table</h2>
+		   		<ol class="romain">
+		   			<li>
+		   				J'ai repris le compte-rendu HTML créé au TP précédent et j'ai conservé 
+		   				l'en-tête et le dernier exercice, que j'ai renommé Exercice 0. Enfin, 
+		   				j'ai supprimé les informations de style. 
+		   			</li>
+		   			<li>
+		   				J'ai créé une feuille de style externe <b>compte-rendu-tp3.css</b> où 
+		   				j'ai recopié les informations de style. Ensuite, je l'ai utilisé dans 
+		   				le fichier <b>compte-rendu-tp3.html</b>
+		   				<p class="extrait">
+		   					&lt;link href="compte-rendu-tp3.css" rel="stylesheet" media="all" type="text/css"&gt;
+		   				</p>
+		   			</li>
+		   			<li>
+		   				J'ai crée la classe <b>romain</b> qui utilise les chiffres romains en 
+		   				minuscules pour les listes ordonnées.
+		   				<p class="extrait">
+		   					ol.romain {<br>&emsp;list-style-type: lower-roman;<br>}
+		  				</p>
+		   			</li>
+		   			<li>
+		   				J'ai créé une table HTML basique dans mon compte-rendu, en 
+		   				utilisant des balises table, tr, th, td.
+		   			</li>
+		   			<li>
+		   				J'ai affecté la valeur 100% à la proprièté <b>width</b> dans la classe 
+		   				<b>table</b> afin que la table occupe toute la largeur du compte rendu.
+		   			</li>
+		   			<li>
+		   				J'ai crée une classe qui s'appelle <b>titre</b> pour la balise <b>tr</b>
+		   				pour centrer les titres et utiliser des petites majuscules.
+		   				<p class="extrait">
+		   					tr.titre {<br>&emsp;font-variant: small-caps;<br>&emsp;text-align: center;<br>}
+		   				</p> 
+		   			</li>
+		   			<li>
+		   				Pour aérer la table avec la propriété <b>padding</b>, j'ai crée une classe
+		   				commune pour les éléments <b>table, th ,td</b>. 
+		   				<p class="extrait">
+		   					table, th, td {<br>&emsp;padding: 10px;<br>} 
+		   				</p>
+		   			</li>
+		   			<li>
+		   				Pour alignéer les valeurs du tableau à gauche, sauf celles de la dernière 
+		   				colonne qui doivent être centrées, j'utilise la classe <b>.centered</b> 
+		   				qu'avec la dernière colonne.
+		   			</li>
+		   			<li>
+		   				Voilà, comment j'ai changé la couleur de fond des lignes paires.
+		   				<p class="extrait">
+		   					tr:nth-child(even) {<br>&emsp;background-color: rgb(80%, 80%, 90%);<br>}
+		   				</p>
+		   			</li>
+		   			<li>
+		   				Codant en hexadécimal, 28 = 1*16+12 = 1C, 120 = 7*16+8 = 78, 12 = 0*16+12
+		   				= 0C. D'où j'ai affecté la valeur #1C780C à la propriété <b>background-
+		   				color</b> dans la pseudo-class <b>tr:hover</b>.
+		   			</li>
+		   		</ol>
+		   		<table>
+		   		  <tr class="titre"> 
+							<th>Films Au Box Office</th>
+						  <th>Montant Des Recettes</th>
+						</tr>
+						<tr> 
+							<td>Spider-Man: No Way Home</td>
+						  <td class="centered">$260,138,569</td>
+						</tr>
+						<tr>
+						  <td>Venom: Let There Be Carnage</td>
+						  <td class="centered">$90,033,210</td>
+						</tr>
+						<tr> 
+		    			<td>Spider-Man: No Way Home</td>
+		    			<td class="centered">$84,548,505</td>
+		    		</tr>
+		    		<tr>
+						  <td>Black Widow</td>
+						  <td class="centered">$80,366,312</td>
+						</tr>
+						<tr> 
+		    			<td>Shang-Chi and the Legend of the Ten Rings</td>
+		    			<td class="centered">$75,388,688</td>
+						</tr>	
+		   		</table>
+		    <h2>Exercice 2&nbsp;: La ferme des animaux</h2>
+			  	<ol>
+			  		<li>
+			  			J'ai téléchargé le fichier zippé et je l'ai extrait dans le dossier <b>
+			  			tp3</b>.
+			  		</li>
+			  		<li>
+			  			J'ai crée une classe <b>img</b> où j'ai redimensionné les images en
+			  			180px.
+			  		</li>
+			  		<li>
+			  			J'ai utilisé l'attribut <b>float: left</b> dans la classe <b>div</b>.
+			  		</li>
+			  		<li>
+			  			Si on fait varier la taille de la fenêtre du navigateur horizontalement,
+			  			les images retournent à la ligne à gauche lorsque la fenêtre devient de 
+			  			plus en plus petite. 
+			  		</li>
+			  		<li>
+			  			Oui, je peux aussi mettre toutes les images à droite en changeant juste
+			  			<b>float: left</b> avec <b>float: right</b> dans la partie CSS du document. 
+			  		</li>
+			  		<li>
+			  			Dans la classe <b>.animal</b> que j'ai créé, j'ai utilisé les attributs
+			  			<b>width, text-align, color, background, padding-top, padding-bottom</b>
+			  			en sorte que les titres (animal1, animal2, etc.) soient affichés en blanc
+			  		  sur fond noir et soient centrés horizontalement avec un espacement
+			  		  convenable.
+			  		</li>
+			  		<li>
+			  			J'ai ajouté la propriété <b>margin-left: 10px;</b> à la classe <b>img</b>
+			  			afin d'espacer les unes des autres les six boîtes contenant les images.
+			  		</li>
+			  		<li>
+			  			J'ai ajouté la propriété <b>border: 3px solid #aaaaaa;</b>  à la classe 
+			  			<b>img</b> pour ajouter une bordure de trois pixels de largeur de couleur 
+			  			#aaaaaa aux images à l'intérieur des boîtes.
+			  		</li>
+			  		<li>
+			  			J'ai réduit l'opacité à 50% lorsque l'utilisateur passe sa souris 
+			  			au-dessus d'une image dans une boîte. 
+			  			<p class="extrait">
+			  				img:hover {<br>&emsp;opacity: 0.5;<br>}
+		 	  			</p>
+			  		</li>
+			  		<li>
+			  			Pour faire en sorte que les titres soient accolés par le bas à l'image 
+			  			et mordent légèrement sur l'image, j'ai utilisé la propriété <b>position, 
+			  			top, right, clear</b>.
+			  		</li>
+			  		<li>
+			  			J'ai mis le texte à mettre après en-dessous des images et de leurs titres
+			  			avec la classe <b>end</b>.
+			  			<p class="extrait">
+			  				.end {<br>&emsp;clear: left;<br>&emsp;text-align: left;<br>}  
+			  			</p>
+			  		</li>
+			    </ol>  
+		    <h2>Exercice 3&nbsp;: Barre de menu</h2>
+		    	<ol>
+		    		<li>
+		    			J'ai fixé la position de la liste en haut à gauche de la partie 
+		    			affichage du navigateur avec les propriétés <b>position: fixed; top: 0
+		    			; left: 0;</b>.
+		    		</li>
+		    		<li>
+		    			J'ai retiré le style par défaut des items de liste avec <b>list-style-
+		    			type: none;</b>. dans la classe <b>.menu</b> des éléments <b>ul</b>.
+		    		</li>
+		    		<li>
+		    			J'ai affiché les items en gras et avec une police Arial (ou sinon sans
+		    			-serif) avec les propriétés <b>font-weight: bold; font-family: "Arial", 
+		    			"Helvetica", "Verdana", sans-serif;</b> dans la classe <b>.barre</b> 
+		    			des éléments <b>li</b>.
+		    		</li>
+		    		<li>
+		    			Dans le but d'afficher les items horizontalement collés à gauche et 
+		    			non plus verticalement, j'ai ajouté la propriété <b>align-items : left
+		    		  ;</b> dans la classe <b>ul.menu</b>.
+		    		</li>
+		    		<li>
+		    			J'ai mis <b>width: 100px; padding-right: 10px;</b> de façon que les 
+		    			items aient une largeur de 100 pixels et un espacement d'une dizaine 
+		    			de pixel entre eux.
+		    		</li>
+		    		<li>
+		    			J'ai introduit la propriété <b>background: purple;</b> de manière de 
+		    			changer le fond du menu pour qu'il soit de couleur violette dans la 
+		    			classe de l'élément <b>ul</b>. Quant à la couleur des items, j'ai 
+		    			intoduit la propriété <b>color: white;</b> dans la classe de l'élément 
+		    			<b>li</b>.
+		    		</li>
+		    		<li>
+		    			J'ai fixé la hauteur du menu à 50 pixels puis j'ai fait en sorte que 
+		    			le menu occupe toute la largeur en utilisant les propriétés <b>height:
+		    			50px; width: 100%;</b> dans la classe <b>ul.menu</b>.
+		    		</li>
+		    		<li>
+		    			J'ai ajouté un style à l'item <b>About</B> pour l'afficher à droite de 
+		    			la barre de menu.
+		    			<p class="extrait">
+		    				&lt;li class="barre" style="float: right;"&gt;About&lt;/li&gt;
+		    			</p>
+		    		</li>
+		    		<li>
+		    			J'ai mis une bordure de 2 pixels seulement en bas (<b>border-bottom: 
+		    			2px solid black;</b>) pour afficher une ligne de 2 pixels en bas du menu.
+		    		</li>
+		    	</ol>
+	    </div>
+    </div>
+ </body>
+</html>
