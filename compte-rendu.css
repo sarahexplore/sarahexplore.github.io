@@ -5,21 +5,21 @@ html {
    background-color: #dcdcdc;
    }
 .col1 {
-	color: #03a696;
+	color: #027373;
 }
 h2 {
-	color: #ff8484;
+	color: #5FCDD9;
    }
 .col3 {
 	color: #d6fff6;
 }
 .conteneur {
 	border: 1px solid #696969;
-	background-color: #154666;
+	background-color:  #172026 ;
 }
 .entete {
-	color: #03A696;
-	background: #253659;
+	color: #5bc0be;
+	background: #124559;
 	padding: 10px;
 }
 .corps {
@@ -33,10 +33,10 @@ h2 {
    font-weight: bold;
    }	
 a:link { 
-	color:  #03a696;
+	color:  #5bc0be;
 	}
 a:hover { 
- 	color: #d6fff6;
+ 	color: #90e0ef;
 	}
 a:visited {
 	color: #211A44;
@@ -49,7 +49,7 @@ a:visited {
 	margin-right: 15%;
 	font-family: "Courier", "Lucida Console", monospace;
 	font-size: 10pt;
-	background-color: #1C263D;
+	background-color: #212f3c ;
 	color: #ffffff;
 	}
 ol.romain {
